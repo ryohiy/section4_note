@@ -236,3 +236,34 @@
 
 // console.log(checkSum(50,40))
 // console.log(checkSum(50,60))
+
+/**
+ * 論理演算子本当の意味
+ */
+
+const flag1 = true;
+const flag2 = false;
+if (flag1 || flag2) {
+  console.log("１か２はtrueです");
+  //この場合、「左側がfalseなら右側を返す」
+  //今の書き方なら、if文に対して左がtrueで、trueを渡すので、if
+  // 文の中を実行する
+  //どちらもfalseなら、左がfalseの時、次に右を観て、
+  // それがfalseだから結局if文にfalseが入ってきて
+  // if文が実行されない。
+  //簡単に考えると、左から順に値がtrueかみていき,trueの時点で
+  //条件文全体としてtrueを返すし、最後までfalseならfalseを
+  //返す。てこと。
+}
+
+//|| !==または,  && !== かつ　である！
+
+const num = null;
+const fee = num || "金額未設定";
+console.log(fee);
+//|| は左側がfalseなら右側を返す,左がtrueならそのまま左を返す
+
+//こんな感じで && をみていく
+//&&は　左側がtrue なら　右側を返す
+//さっきのかんじだと、trueの時次の判定に進み、falseの時点で条件全体が
+//falseになる。そしてその時点で次の処理、状態に進まなくなる。
